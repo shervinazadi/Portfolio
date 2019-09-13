@@ -1,5 +1,5 @@
 <template>
-    <div id="dashboard" class="container pt-5">
+    <div id="dashboard"> <!-- class="container pt-5">
         <div class="card">
             <table class="table table-striped">
                 <thead>
@@ -19,7 +19,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> -->
         <div v-html="mdContent"></div>
     </div>
 

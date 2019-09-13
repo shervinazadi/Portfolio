@@ -1,7 +1,7 @@
 
 <template>
     <div class="tree-menu" id="vert-menu">
-        <div id="side-by-side" :style="indent_sign" @click="toggleChildren">{{ sign }}</div>
+        <div id="side-by-side" :style="indent" @click="toggleChildren">{{ sign }}</div>
         <div id="side-by-side" :style="indent" >{{ label }}</div>
 
         <div v-if="showChildren">
@@ -28,10 +28,7 @@
         name: 'tree-menu',
         computed: {
         indent() {
-            return { transform: `translate(${this.depth * 25}px)` }
-        },
-        indent_sign() {
-            return { transform: `translate(${this.depth * 20}px)` }
+            return { transform: `translate(${this.depth * 10}px)` }
         }
         },
         methods: {
