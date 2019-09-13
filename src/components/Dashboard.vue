@@ -20,6 +20,7 @@
                 </tbody>
             </table>
         </div>
+        <div v-html="mdContent"></div>
     </div>
 
 </template>
@@ -27,7 +28,7 @@
 <script>
 import firebase from 'firebase'
 import {db} from './firebaseInit'
-
+import foo from 'frontmatter-markdown-loader!./blog/foo.md'
 export default {
     name: 'dashboard',
     data () {
@@ -35,12 +36,14 @@ export default {
             employees: [],
             isLoggedIn: false,
             currentUser: false,
+            mdContent: null,
         }
     },
     created () {
         if (firebase.auth().currentUser) {
             this.isLoggedIn = true
             this.currentUser = firebase.auth().currentUser.email
+            this.mdContent = foo.html;
         }
         db.collection('employees').orderBy('employee_id').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
