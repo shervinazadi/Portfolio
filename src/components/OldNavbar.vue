@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <router-link to="/" class="navbar-brand" >Playscapes</router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -16,47 +16,18 @@
                     <li class="nav-item" v-if="isLoggedIn"><button v-on:click="logout" class="btn btn-outline-dark my-2 my-sm-0">Logout</button></li>
                 </ul>
             </div>
-        </nav> -->
-        <tree-menu :label="tree.label" :nodes="tree.nodes" :depth="0"></tree-menu>
+        </nav>
     </div>
 </template>
 
 <script>
 import firebase from 'firebase'
-import TreeMenu from './TreeMenu.vue'
 export default {
     name: 'navbar',
-    components: {
-        TreeMenu
-    },
     data() {
         return {
             isLoggedIn: false,
-            currentUser: false,
-            tree : {
-            label: 'root',
-            nodes: [
-                {
-                label: 'item1',
-                nodes: [
-                    {
-                    label: 'item1.1'
-                    },
-                    {
-                    label: 'item1.2',
-                    nodes: [
-                        {
-                        label: 'item1.2.1'
-                        }
-                    ]
-                    }
-                ]
-                },
-                {
-                label: 'item2'
-                }
-            ]
-            }
+            currentUser: false
         }
     },
     created() {
@@ -79,5 +50,3 @@ export default {
     }
 }
 </script>
-
-

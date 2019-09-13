@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 var VueFire = require("vuefire");
 Vue.use(VueFire);
 
+
 let app;
 firebase.auth().onAuthStateChanged(user => {
   if (!app) {
@@ -17,7 +18,7 @@ firebase.auth().onAuthStateChanged(user => {
       el: '#app',
       router,
       components: { App },
-      template: '<App/>'
+      template: '<App/>',
     })
   }
 })

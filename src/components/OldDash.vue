@@ -1,6 +1,16 @@
 <template>
     <div id="dashboard" class="container pt-5">
         <div class="card">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Signed in as: {{currentUser}}</li>
+                <button @click="logout" class="list-group-item btn btn-outline-danger">Sign Out</button>
+            </ul>
+        </div>
+        <hr>
+        <div class="card">
+            <div class="card-header">
+                <h4>Ongoing Games</h4>
+            </div>
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -19,22 +29,25 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-    </div>
+            <ul class="list-group list-group-flush">
+                <router-link to="/" class="list-group-item btn btn-outline-success">Add (to be implemented)</router-link>
+            </ul>
 
+        </div>
+
+    </div>
 </template>
 
 <script>
 import firebase from 'firebase'
 import {db} from './firebaseInit'
-
 export default {
     name: 'dashboard',
     data () {
         return {
             employees: [],
             isLoggedIn: false,
-            currentUser: false,
+            currentUser: false
         }
     },
     created () {
