@@ -27,17 +27,20 @@ export default {
         }
     },
     created() {
+        //open the listener for the window size
         window.addEventListener('resize', this.handleResize)
         this.handleResize();
     },
     destroyed() {
+        //close the listener for the window size
         window.removeEventListener('resize', this.handleResize)
     },
     methods: {
         handleResize() {
+            //change the size
             this.window.width = window.innerWidth;
             this.window.height = window.innerHeight;
-            console.log(this.window.width)
+            //chenge the css styling base on the size
             if (window.innerWidth > 540) {
                 this.bodyID = 'deskBody'
                 this.navbarID = 'sideMenu'
@@ -45,7 +48,6 @@ export default {
                 this.bodyID = 'mobilBody'
                 this.navbarID = 'topMenu'
             }
-            console.log(this.bodyID)
         },
     }
 }
@@ -64,10 +66,14 @@ export default {
     padding-left: 150px;
     padding-right: 50px;
     padding-top: 50px;
+    max-width: 700px;
 }
 #mobilBody {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-top: 50px;
+}body {
+  background-image: linear-gradient(-90deg, rgba(33, 33, 33), rgb(43, 43, 43));
+  color: aliceblue;
 }
 </style>
