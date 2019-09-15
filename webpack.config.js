@@ -9,7 +9,7 @@ module.exports = {
         {
             test: /three\/examples\/js/,
             use: 'imports-loader?THREE=three'
-        }
+        },
         ]
     }
 };

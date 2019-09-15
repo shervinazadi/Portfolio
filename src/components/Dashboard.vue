@@ -20,7 +20,8 @@
                 </tbody>
             </table>
         </div> -->
-        <div v-html="mdContent"></div>
+        <div id="textBox" v-html="mdContent"></div> 
+
     </div>
 
 </template>
@@ -28,7 +29,16 @@
 <script>
 import firebase from 'firebase'
 import {db} from './firebaseInit'
-import foo from 'frontmatter-markdown-loader!./blog/foo.md'
+//importing the markdown file as a string
+import footext from 'raw-loader!./blog/foo.md'
+
+//initializing thee markdown interpreter
+var md = require('markdown-it')({
+    breaks:       true, 
+});
+//rendering the markdown as html
+var result = md.render(footext);
+
 export default {
     name: 'dashboard',
     data () {
@@ -43,7 +53,7 @@ export default {
         if (firebase.auth().currentUser) {
             this.isLoggedIn = true
             this.currentUser = firebase.auth().currentUser.email
-            this.mdContent = foo.html;
+            this.mdContent = result;// moving the markdown html to a Vue variable
         }
         db.collection('employees').orderBy('employee_id').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
@@ -72,3 +82,10 @@ export default {
     }
 }
 </script>
+
+<style>
+#textBox {
+    text-align: justify;
+    text-justify: inter-word;
+}
+</style>

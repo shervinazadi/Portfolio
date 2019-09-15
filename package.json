@@ -14,6 +14,8 @@
     "d3": "^5.9.0",
     "firebase": "^5.8.2",
     "hsl-to-hex": "^1.0.0",
+    "markdown-it": "^10.0.0",
+    "markdown-loader": "^5.1.0",
     "orbit-controls-es6": "^2.0.0",
     "three": "^0.87.1",
     "three-orbit-controls": "^82.1.0",
@@ -21,6 +23,7 @@
     "three-orbitcontrols-ts": "^0.1.2",
     "tinycolor2": "^1.4.1",
     "vue": "^2.5.2",
+    "vue-markdown-loader": "^2.4.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -50,6 +53,7 @@
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
+    "raw-loader": "^3.1.0",
     "rimraf": "^2.6.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",

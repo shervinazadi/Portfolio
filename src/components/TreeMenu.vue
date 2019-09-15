@@ -50,8 +50,8 @@
 }
 #vert-menu > #side-by-side{
     position: relative;
-    left: 30px;
-    top: 30px;
+    left: 20px;
+    top: 20px;
     font-weight: 500;
   	font-family: Helvetica Neue;
 }
