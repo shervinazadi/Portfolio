@@ -30,6 +30,7 @@
 
 <script>
 import {db} from './firebaseInit'
+
 export default {
     name: 'view-employee',
     data () {

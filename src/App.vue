@@ -63,7 +63,7 @@ export default {
     top: 0px;
 }
 #deskBody {
-    padding-left: 150px;
+    padding-left: 200px;
     padding-right: 50px;
     padding-top: 50px;
     max-width: 700px;
@@ -72,8 +72,10 @@ export default {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 50px;
-}body {
-  background-image: linear-gradient(-90deg, rgba(33, 33, 33), rgb(43, 43, 43));
-  color: aliceblue;
+}
+body {
+    background-image: linear-gradient(90deg, rgb(38, 38, 38), rgb(43, 43, 43));
+    color: rgb(240, 240, 240);
+    background-attachment: fixed;
 }
 </style>

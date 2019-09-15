@@ -1,29 +1,14 @@
 <template>
     <div>
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <router-link to="/" class="navbar-brand" >Playscapes</router-link>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                    <li class="nav-item" v-if="isLoggedIn"><router-link class="nav-link" to="/rtplay">RT Playboard</router-link></li>
-                    <li class="nav-item" v-if="isLoggedIn"><router-link class="nav-link" to="/rtthreed">RT 3D</router-link></li>
-                    <li class="nav-item" v-if="isLoggedIn"><router-link class="nav-link" to="/">{{currentUser}}</router-link></li>
-                    <li class="nav-item" v-if="!isLoggedIn"><router-link class="nav-link" to="/login">Login</router-link></li>
-                    <li class="nav-item" v-if="!isLoggedIn"><router-link class="nav-link" to="/register">Register</router-link></li>
-                    <li class="nav-item" v-if="isLoggedIn"><button v-on:click="logout" class="btn btn-outline-dark my-2 my-sm-0">Logout</button></li>
-                </ul>
-            </div>
-        </nav> -->
-        <tree-menu :label="tree.label" :nodes="tree.nodes" :depth="0"></tree-menu>
+        <tree-menu :system_id="localTree.system_id" :nodes="localTree.nodes" :depth="0"></tree-menu>
     </div>
 </template>
 
 <script>
 import firebase from 'firebase'
 import TreeMenu from './TreeMenu.vue'
+import {db} from './firebaseInit'
+
 export default {
     name: 'navbar',
     components: {
@@ -33,30 +18,77 @@ export default {
         return {
             isLoggedIn: false,
             currentUser: false,
+            localTree: {
+                system_id: 'assemblage',
+                nodes:[]
+            },
             tree : {
-            label: 'root',
-            nodes: [
-                {
-                label: 'item1',
+                label: '[assemblage]',
                 nodes: [
                     {
-                    label: 'item1.1'
-                    },
-                    {
-                    label: 'item1.2',
+                    label: '[systems]',
                     nodes: [
                         {
-                        label: 'item1.2.1'
-                        }
+                        label: '[playscapes]'
+                        },
+                        {
+                        label: '[hyper[fold]]'
+                        },
+                        {
+                        label: '[onthego]'
+                        },
+                        {
+                        label: '[bscgrad]'
+                        },
+                        {
+                        label: '[emergentium]'
+                        },
+                        {
+                        label: '[godesign]'
+                        },
+                        {
+                        label: '[this]'
+                        },
+                        {
+                        label: '[hutorials]'
+                        },
+                        {
+                        label: '[sosages]'
+                        },
+                        {
+                        label: '[velo]'
+                        },
+                        {
+                        label: '[earthy]'
+                        },
+                        {
+                        label: '[spatialcomputing]'
+                        },
+                        {
+                        label: '[planetmaker]'
+                        },
+                        {
+                        label: '[skycity]'
+                        },
+                        {
+                        label: '[polyshell]'
+                        },
+                        {
+                        label: '[bkbeats]'
+                        },
                     ]
-                    }
+                    },
+                    {
+                    label: '[blog]'
+                    },
+                    {
+                    label: '[tags]'
+                    },
+                    {
+                    label: '[me]'
+                    },
                 ]
-                },
-                {
-                label: 'item2'
-                }
-            ]
-            }
+            },
         }
     },
     created() {
@@ -64,6 +96,8 @@ export default {
             this.isLoggedIn = true
             this.currentUser = firebase.auth().currentUser.email
         }
+        this.fetchPages(this.localTree)
+        console.log(this.localTree)
     },
     methods: {
         logout: function() {
@@ -75,7 +109,25 @@ export default {
 
                 }
             )
-        }
+        },
+        //recursive function to find the order od pages
+        fetchPages (parentNode) { 
+            db.collection('systems')
+            .where('parent', '==', parentNode.system_id)
+            .get().then(querySnapshot => {
+                querySnapshot.forEach(doc => {
+                    const childNode = { //creating the child node
+                        'id': doc.id,
+                        'system_id': doc.data().system_id,
+                        'parent': doc.data().parent,
+                        'title': doc.data().title,
+                        'nodes' : []
+                    }
+                    this.fetchPages(childNode) //runing the function for the child node
+                    parentNode.nodes.push(childNode) //pushing the node to the upper level nodes list
+                })
+            })
+        },
     }
 }
 </script>

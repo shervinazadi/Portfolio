@@ -1,8 +1,9 @@
 export default {
-    apiKey: "AIzaSyCeOmk2Dn8KK175ip0Pmgb7cu1kd7j_M8o",
-    authDomain: "playscapes01.firebaseapp.com",
-    databaseURL: "https://playscapes01.firebaseio.com",
-    projectId: "playscapes01",
-    storageBucket: "playscapes01.appspot.com",
-    messagingSenderId: "370840827427"
+    apiKey: "AIzaSyDWP4zH-V4o_sDD4vqG-nQDcUUjfx6F_VA",
+    authDomain: "personalwebsite-cc48b.firebaseapp.com",
+    databaseURL: "https://personalwebsite-cc48b.firebaseio.com",
+    projectId: "personalwebsite-cc48b",
+    storageBucket: "",
+    messagingSenderId: "449581047032",
+    appId: "1:449581047032:web:4cd1a188591671a99cef0d"
 }

@@ -1,50 +1,13 @@
-# Generating DOI
+# Lorem Ipsum
 
 ---
-There are only eight agencies who issue DOI’s and any other agency has an agreement in place with one of these eight. Therefore, the DOI system is very much centralized.
-[DOI Registration Agencies](https://www.doi.org/registration_agencies.html)
 
->>> DOIs for most scholarly publications are issued through CrossRef. CrossRef do not assign DOIs directly, but delegate this to members or their agents. Members, who are usually publishers, pay a fee to the central consortium, and agree to issue DOIs based on a [fixed set of rules](http://www.crossref.org/02publishers/59pub_rules.html) .
-> As you can see from these rules, the general sense of membership is “organisations issuing DOIs for stuff they control”. While there isn’t an explicit prohibition against assigning DOIs to third-party material (which surprised me!), point 4 comes pretty close:
-> _Members have an obligation to maintain the metadata and URLs associated with all registered DOIs._
----
-However there are some websites that they generate DOIs for the materials that we upload *only on their website*:
-* [Zenodo - Research. Shared.](https://zenodo.org/) : **This one will accept a github page as well**
-* [figshare - credit for all your research](https://figshare.com/)
-* [The Dataverse Project - Dataverse.org](https://dataverse.org/)
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tortor lorem, fringilla in mattis dictum, consectetur id magna. Nullam malesuada, diam vitae dictum ullamcorper, mauris mauris accumsan dolor, in vulputate neque urna vel felis. Praesent at viverra mi. Nunc eu tortor ut magna egestas cursus non imperdiet tortor. Nulla a dolor id nunc cursus venenatis. Integer auctor congue nibh ultrices rhoncus. Donec lobortis, odio eu accumsan rhoncus, eros elit fringilla purus, ut feugiat diam lorem a mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse pulvinar ante in libero commodo bibendum. Sed ut nisi ex. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam vitae dolor sollicitudin, rutrum metus blandit, bibendum magna.
 
-There are only eight agencies who issue DOI’s and any other agency has an agreement in place with one of these eight. Therefore, the DOI system is very much centralized.
-[DOI Registration Agencies](https://www.doi.org/registration_agencies.html)
+Vestibulum id neque ut nulla euismod dictum. Donec vehicula, nisl non dictum tempus, arcu sapien consequat augue, id cursus elit diam nec dui. Nullam ac imperdiet nibh. Duis imperdiet, urna auctor pharetra tristique, lacus felis tempus enim, a finibus est justo vel justo. Aenean tristique id diam in cursus. Morbi non nunc odio. Proin magna elit, vulputate vitae est vel, finibus sodales mauris. Nullam nec tempor metus, non condimentum sapien. Sed vehicula, lacus in fringilla placerat, diam diam venenatis dolor, et sodales elit velit vel velit. Nunc diam tortor, lacinia vel pulvinar in, lacinia sed dui.
 
->>> DOIs for most scholarly publications are issued through CrossRef. CrossRef do not assign DOIs directly, but delegate this to members or their agents. Members, who are usually publishers, pay a fee to the central consortium, and agree to issue DOIs based on a [fixed set of rules](http://www.crossref.org/02publishers/59pub_rules.html) .
-> As you can see from these rules, the general sense of membership is “organisations issuing DOIs for stuff they control”. While there isn’t an explicit prohibition against assigning DOIs to third-party material (which surprised me!), point 4 comes pretty close:
-> _Members have an obligation to maintain the metadata and URLs associated with all registered DOIs._
----
-However there are some websites that they generate DOIs for the materials that we upload *only on their website*:
-* [Zenodo - Research. Shared.](https://zenodo.org/) : **This one will accept a github page as well**
-* [figshare - credit for all your research](https://figshare.com/)
-* [The Dataverse Project - Dataverse.org](https://dataverse.org/)
+Donec quis ante tortor. In et elit ut quam vehicula rhoncus pharetra vitae eros. Nullam non ornare felis, et tempus orci. Donec facilisis dui tellus, vitae finibus libero tristique quis. Vivamus convallis sed justo vel luctus. Aenean commodo vehicula sapien. Quisque augue neque, aliquet nec mi nec, posuere commodo magna. Donec a metus dignissim, accumsan libero a, scelerisque nibh. Duis tellus metus, venenatis non euismod et, congue ac sapien. Vestibulum interdum lacus augue, eget bibendum urna fermentum sit amet. Proin vitae purus at erat porta hendrerit ut vitae diam. Curabitur scelerisque bibendum mollis. Nullam at tellus congue, maximus quam a, consequat ligula. Donec non arcu mauris. Duis viverra lacinia tellus. Morbi ornare tincidunt efficitur.
 
-There are only eight agencies who issue DOI’s and any other agency has an agreement in place with one of these eight. Therefore, the DOI system is very much centralized.
-[DOI Registration Agencies](https://www.doi.org/registration_agencies.html)
+Etiam posuere, eros ut ullamcorper mollis, mi lectus placerat sapien, sit amet semper nulla erat vel diam. Donec id sem lacinia, dapibus libero id, vestibulum orci. Nullam blandit orci ut sem pellentesque, sit amet cursus justo ultrices. Suspendisse nec vehicula ipsum. Cras non lacinia dui, nec tempor massa. Praesent ornare aliquam diam pretium fermentum. Aliquam eget ipsum leo. Proin lorem eros, dapibus nec nunc at, egestas lacinia sapien. Vestibulum libero nunc, dictum auctor lacinia eget, finibus eu est. Duis arcu ex, faucibus sit amet purus eget, mattis iaculis sapien. Donec sed cursus turpis. Praesent ut ante lobortis, molestie felis eu, sollicitudin tellus. Nam vel urna consequat dui elementum interdum sit amet non eros.
 
->>> DOIs for most scholarly publications are issued through CrossRef. CrossRef do not assign DOIs directly, but delegate this to members or their agents. Members, who are usually publishers, pay a fee to the central consortium, and agree to issue DOIs based on a [fixed set of rules](http://www.crossref.org/02publishers/59pub_rules.html) .
-> As you can see from these rules, the general sense of membership is “organisations issuing DOIs for stuff they control”. While there isn’t an explicit prohibition against assigning DOIs to third-party material (which surprised me!), point 4 comes pretty close:
-> _Members have an obligation to maintain the metadata and URLs associated with all registered DOIs._
----
-However there are some websites that they generate DOIs for the materials that we upload *only on their website*:
-* [Zenodo - Research. Shared.](https://zenodo.org/) : **This one will accept a github page as well**
-* [figshare - credit for all your research](https://figshare.com/)
-* [The Dataverse Project - Dataverse.org](https://dataverse.org/)
-
-There are only eight agencies who issue DOI’s and any other agency has an agreement in place with one of these eight. Therefore, the DOI system is very much centralized.
-[DOI Registration Agencies](https://www.doi.org/registration_agencies.html)
-
->>> DOIs for most scholarly publications are issued through CrossRef. CrossRef do not assign DOIs directly, but delegate this to members or their agents. Members, who are usually publishers, pay a fee to the central consortium, and agree to issue DOIs based on a [fixed set of rules](http://www.crossref.org/02publishers/59pub_rules.html) .
-> As you can see from these rules, the general sense of membership is “organisations issuing DOIs for stuff they control”. While there isn’t an explicit prohibition against assigning DOIs to third-party material (which surprised me!), point 4 comes pretty close:
-> _Members have an obligation to maintain the metadata and URLs associated with all registered DOIs._
----
-However there are some websites that they generate DOIs for the materials that we upload *only on their website*:
-* [Zenodo - Research. Shared.](https://zenodo.org/) : **This one will accept a github page as well**
-* [figshare - credit for all your research](https://figshare.com/)
-* [The Dataverse Project - Dataverse.org](https://dataverse.org/)
+Etiam nulla massa, tincidunt in mattis a, hendrerit sed risus. Nullam nec neque nec est scelerisque interdum at eu felis. Pellentesque orci quam, commodo a finibus nec, posuere a justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus auctor tincidunt ipsum, at pretium tellus venenatis vel. Aenean mollis bibendum molestie. Aliquam pharetra hendrerit auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce velit dui, dapibus eget gravida vitae, scelerisque vel odio. In vel lacus et dolor eleifend vulputate sit amet quis magna. Aenean sed lobortis sapien. Curabitur ut sem ac est efficitur posuere. Quisque nulla nulla, porttitor vitae orci et, venenatis tristique massa. Sed malesuada nulla metus, non elementum ligula vehicula ut.

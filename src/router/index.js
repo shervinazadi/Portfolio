@@ -4,6 +4,7 @@ import Dashboard from '@/components/Dashboard'
 import NewEmployee from '@/components/NewEmployee'
 import EditEmployee from '@/components/EditEmployee'
 import ViewEmployee from '@/components/ViewEmployee'
+import ViewSystem from '@/components/ViewSystem'
 import Login from '@/components/Login';
 import Register from '@/components/Register';
 import Playboard from '@/components/Playboard';
@@ -101,6 +102,14 @@ let router = new Router({
       path: '/:employee_id',
       name: 'view-employee',
       component: ViewEmployee,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/systems/:system_id',
+      name: 'view-system',
+      component: ViewSystem,
       meta: {
         requiresAuth: true
       }

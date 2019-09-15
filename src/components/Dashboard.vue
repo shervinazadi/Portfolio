@@ -30,7 +30,7 @@
 import firebase from 'firebase'
 import {db} from './firebaseInit'
 //importing the markdown file as a string
-import footext from 'raw-loader!./blog/foo.md'
+import footext from 'raw-loader!./blog/doi.md'
 
 //initializing thee markdown interpreter
 var md = require('markdown-it')({
@@ -54,6 +54,7 @@ export default {
             this.isLoggedIn = true
             this.currentUser = firebase.auth().currentUser.email
             this.mdContent = result;// moving the markdown html to a Vue variable
+            //console.log(this.mdContent)
         }
         db.collection('employees').orderBy('employee_id').get().then(querySnapshot => {
             querySnapshot.forEach(doc => {
@@ -66,7 +67,6 @@ export default {
                 this.employees.push(data)
             })
         })
-        console.log(this.employees)
     },
     methods: {
         logout: function() {

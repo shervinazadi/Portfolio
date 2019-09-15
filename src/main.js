@@ -10,6 +10,8 @@ Vue.config.productionTip = false
 var VueFire = require("vuefire");
 Vue.use(VueFire);
 
+import VueResource from 'vue-resource';
+Vue.use(VueResource);
 
 let app;
 firebase.auth().onAuthStateChanged(user => {
