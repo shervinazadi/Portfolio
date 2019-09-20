@@ -15,6 +15,7 @@
     "firebase": "^5.8.2",
     "hsl-to-hex": "^1.0.0",
     "markdown-it": "^10.0.0",
+    "markdown-it-container": "^2.0.0",
     "markdown-loader": "^5.1.0",
     "orbit-controls-es6": "^2.0.0",
     "three": "^0.87.1",

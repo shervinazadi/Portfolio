@@ -97,7 +97,6 @@ export default {
             this.currentUser = firebase.auth().currentUser.email
         }
         this.fetchPages(this.localTree)
-        console.log(this.localTree)
     },
     methods: {
         logout: function() {

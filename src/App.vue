@@ -77,5 +77,31 @@ body {
     background-image: linear-gradient(90deg, rgb(38, 38, 38), rgb(43, 43, 43));
     color: rgb(240, 240, 240);
     background-attachment: fixed;
+    font-family: Helvetica Neue, monospace;
+    letter-spacing: 1px;
+    /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
+}
+/* unvisited link */
+a:link {
+  color: rgb(93, 160, 234);
+  text-decoration: underline;
+}
+/* visited link */
+a:visited {
+  color: rgb(93, 160, 234);
+  text-decoration: underline;
+}
+/* mouse over link */
+a:hover {
+  color: rgb(128, 179, 235);
+  text-decoration: underline;
+}
+/* selected link */
+a:active {
+  color: rgb(93, 160, 234);
+  text-decoration: underline;
+}
+p {
+    
 }
 </style>

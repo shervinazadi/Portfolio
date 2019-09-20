@@ -98,6 +98,7 @@ let router = new Router({
         requiresAuth: true
       }
     },
+    /*
     {
       path: '/:employee_id',
       name: 'view-employee',
@@ -105,9 +106,9 @@ let router = new Router({
       meta: {
         requiresAuth: true
       }
-    },
+    },*/
     {
-      path: '/systems/:system_id',
+      path: '/:system_id',
       name: 'view-system',
       component: ViewSystem,
       meta: {

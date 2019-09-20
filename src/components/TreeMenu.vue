@@ -1,8 +1,9 @@
 
 <template>
     <div class="tree-menu" id="vert-menu">
-        <div id="side-by-side" :style="indent" @click="toggleChildren">{{ sign }}</div>
-        <div id="side-by-side" :style="indent" >{{ system_id }}</div>
+        <div id="side-by-side-sign" :style="indent" @click='toggleChildren'>{{ sign }}</div>
+        <!-- <div id="side-by-side" :style="indent" >{{ system_id }}</div> -->
+        <router-link id="side-by-side" :style="indent" v-bind:to="{name: 'view-system', params: {system_id: system_id}}">{{ system_id }}</router-link>
 
         <div v-if="showChildren">
             <tree-menu
@@ -28,7 +29,7 @@
         },
         computed: {
         indent() {
-            return { transform: `translate(${this.depth * 10}px)` }
+            return { transform: `translate(${this.depth * -3}px)` }
         },
 
         sign() {
@@ -49,17 +50,47 @@
 </script>
 
 <style>
-#side-by-side {
+#side-by-side-sign {
     display: inline-block;
     width: 10px;
-    font-weight: 500;
-  	font-family: Helvetica Neue;
+    font-weight: 800;
+    font-family: Helvetica Neue, monospace;
+    cursor: pointer;
 }
-#vert-menu > #side-by-side{
+#side-by-side {
+    display: inline-block;
+    width: 15px;
+    font-weight: 400;
+  	font-family: Helvetica Neue, monospace;
+    cursor: pointer;
+    
+}
+/* unvisited link */
+#side-by-side:link {
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+}
+/* visited link */
+#side-by-side:visited {
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+}
+/* mouse over link */
+#side-by-side:hover {
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+}
+/* selected link */
+#side-by-side:active {
+  color: rgb(210, 210, 210);
+  text-decoration: none;
+}
+#vert-menu {
     position: relative;
     left: 12px;
     top: 7px;
     font-weight: 400;
-  	font-family: Helvetica Neue;
+  	font-family: Helvetica Neue, monospace;
+    
 }
 </style>
