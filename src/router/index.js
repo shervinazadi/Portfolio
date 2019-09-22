@@ -113,7 +113,7 @@ let router = new Router({
       name: 'view-system',
       component: ViewSystem,
       meta: {
-        requiresGuest: true
+        requiresAuth: true
       }
     },
   ]

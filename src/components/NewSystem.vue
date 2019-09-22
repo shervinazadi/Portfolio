@@ -138,17 +138,17 @@ export default {
                         var count = (body.match(/:::/g) || []).length;
                         var lclInlineList = [];
                         var i;
-                        var collapsed  =  '[+] ';
+                        var collapsed  =  '[+]';
                         for (i=0; i<count; i++) lclInlineList.push(collapsed) 
                         return lclInlineList
                     },
                     evalFunc: function(str,id) {
             
-                        if (this.inlineList[id] === '[+] ') {
-                            var newHidden = ' '+ str + ' ';
+                        if (this.inlineList[id] === '[+]') {
+                            var newHidden = str;
                             this.expand(newHidden,id);
                         } else {
-                            var newHidden = '[+] ';
+                            var newHidden = '[+]';
                             this.collapse(newHidden,id);
                         } 
                     },
@@ -187,7 +187,7 @@ export default {
                             //counter
                             counter--;
                             // break the loop
-                            if (counter < 6) {
+                            if (counter < 5) {
                                 //add the plus sign
                                 tempHidden  = self.splice(tempHidden,1,2,'+');
                                 Vue.set(this.inlineList, id, tempHidden)
@@ -250,7 +250,7 @@ img{
     width: 520px;
 }
 #mdInline {
-    color: rgb(134, 134, 134);
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 </style>

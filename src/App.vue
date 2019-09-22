@@ -77,7 +77,7 @@ export default {
 }
 body {
     background-image: linear-gradient(90deg, rgb(36, 36, 36), rgb(43, 43, 43));
-    color: rgb(240, 240, 240);
+    color: rgb(214, 214, 214);
     background-attachment: fixed;
     font-family: Helvetica Neue, monospace;
     letter-spacing: 0.5px;
