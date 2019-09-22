@@ -75,7 +75,7 @@ export default {
     padding-top: 50px;
     padding-bottom: 50px;
 }
-#app {
+body {
     background-image: linear-gradient(90deg, rgb(36, 36, 36), rgb(43, 43, 43));
     color: rgb(240, 240, 240);
     background-attachment: fixed;
