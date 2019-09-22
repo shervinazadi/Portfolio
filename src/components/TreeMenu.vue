@@ -11,8 +11,7 @@
             :key="node.system_id"
             :nodes="node.nodes"
             :system_id="node.system_id"
-            :depth="depth + 1"
-            >
+            :depth="depth + 1">
             </tree-menu>
         </div>
     </div>
@@ -28,23 +27,24 @@
             }
         },
         computed: {
-        indent() {
-            return { transform: `translate(${this.depth * -3}px)` }
-        },
+            indent() {
+                return { transform: `translate(${this.depth * -3}px)` }
+            },
 
-        sign() {
-            if (!this.showChildren) return "+";
-            else return "-";
-        },
+            sign() {
+                if (!this.showChildren) return "+";
+                else return "-";
+            },
+            
         },
         methods: {
-        toggleChildren() {
-            this.showChildren = !this.showChildren;
-        },
-        calcShowChild() {
-            if (this.depth == 0) return true;
-            else return false;
-        },
+            toggleChildren() {
+                this.showChildren = !this.showChildren;
+            },
+            calcShowChild() {
+                if (this.depth == 0) return true;
+                else return false;
+            },
         }
     }
 </script>

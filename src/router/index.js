@@ -5,6 +5,7 @@ import NewEmployee from '@/components/NewEmployee'
 import EditEmployee from '@/components/EditEmployee'
 import ViewEmployee from '@/components/ViewEmployee'
 import ViewSystem from '@/components/ViewSystem'
+import NewSystem from '@/components/NewSystem'
 import Login from '@/components/Login';
 import Register from '@/components/Register';
 import Playboard from '@/components/Playboard';
@@ -84,8 +85,8 @@ let router = new Router({
     },
     {
       path: '/new',
-      name: 'new-employee',
-      component: NewEmployee,
+      name: 'new-system',
+      component: NewSystem,
       meta: {
         requiresAuth: true
       }
@@ -112,7 +113,7 @@ let router = new Router({
       name: 'view-system',
       component: ViewSystem,
       meta: {
-        requiresAuth: true
+        requiresGuest: true
       }
     },
   ]

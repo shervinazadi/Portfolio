@@ -66,19 +66,22 @@ export default {
     padding-left: 200px;
     padding-right: 50px;
     padding-top: 50px;
-    max-width: 700px;
+    padding-bottom: 100px;
+    /* max-width: 1000px; */
 }
 #mobilBody {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
-body {
-    background-image: linear-gradient(90deg, rgb(38, 38, 38), rgb(43, 43, 43));
+#app {
+    background-image: linear-gradient(90deg, rgb(36, 36, 36), rgb(43, 43, 43));
     color: rgb(240, 240, 240);
     background-attachment: fixed;
     font-family: Helvetica Neue, monospace;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    /*font-family: Helvetica Neue, monospace; */
     /*font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;*/
 }
 /* unvisited link */

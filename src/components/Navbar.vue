@@ -22,73 +22,6 @@ export default {
                 system_id: 'assemblage',
                 nodes:[]
             },
-            tree : {
-                label: '[assemblage]',
-                nodes: [
-                    {
-                    label: '[systems]',
-                    nodes: [
-                        {
-                        label: '[playscapes]'
-                        },
-                        {
-                        label: '[hyper[fold]]'
-                        },
-                        {
-                        label: '[onthego]'
-                        },
-                        {
-                        label: '[bscgrad]'
-                        },
-                        {
-                        label: '[emergentium]'
-                        },
-                        {
-                        label: '[godesign]'
-                        },
-                        {
-                        label: '[this]'
-                        },
-                        {
-                        label: '[hutorials]'
-                        },
-                        {
-                        label: '[sosages]'
-                        },
-                        {
-                        label: '[velo]'
-                        },
-                        {
-                        label: '[earthy]'
-                        },
-                        {
-                        label: '[spatialcomputing]'
-                        },
-                        {
-                        label: '[planetmaker]'
-                        },
-                        {
-                        label: '[skycity]'
-                        },
-                        {
-                        label: '[polyshell]'
-                        },
-                        {
-                        label: '[bkbeats]'
-                        },
-                    ]
-                    },
-                    {
-                    label: '[blog]'
-                    },
-                    {
-                    label: '[tags]'
-                    },
-                    {
-                    label: '[me]'
-                    },
-                ]
-            },
         }
     },
     created() {
@@ -105,7 +38,6 @@ export default {
                     //this.$router.go({path: this.$router.path})
                     this.$router.push('/login')
                     window.location.reload(true)
-
                 }
             )
         },

@@ -85,7 +85,7 @@ export default {
 
 <style>
 #textBox {
-    text-align: justify;
-    text-justify: inter-word;
+    /*text-align: justify;
+    text-justify: inter-word;*/
 }
 </style>

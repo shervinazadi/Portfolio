@@ -1,6 +1,44 @@
 <template>
-    <div id="view-system">
-        <div v-if="isLoaded">
+     <div id="new-system" class="row">
+        <div class="container pt-5 col-sm-5">
+            <div class="card text-white bg-dark border-light mb-3" >
+                <div class="card-header">
+                    <h4>Edit System</h4>
+                </div>
+                <div class="card-body ">
+                    <form @submit.prevent="saveSystem" class="col s12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend ">
+                                <span class="input-group-text  bg-dark text-white">System ID</span>
+                            </div>
+                            <input type="text" v-model="system_id" required class="form-control  bg-dark text-white">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark text-white">Title</span>
+                            </div>
+                            <input type="text" v-model="title" required class="form-control bg-dark text-white">
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-dark text-white">Parent</span>
+                            </div>
+                            <input type="text" v-model="parent" required class="form-control bg-dark text-white">
+                        </div>
+                        <div class="input-group mb-3">
+                            <textarea v-model="body" class="form-control bg-dark text-white" id="mdEditor" :rows="textHeight" ref="mdEditor"></textarea>
+                        </div>
+                        <hr>
+                        <div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <router-link to="/" class="btn btn-outline-danger">Cancel</router-link>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="container pt-5 col-sm-6" id="textBox" v-html="mdContent"></div> -->
+        <div class="container pt-5 col-sm-6" id="textBox">
             <component :is="mdViewer" />
         </div>
     </div>
@@ -10,10 +48,12 @@
 import {db} from './firebaseInit'
 import Vue from 'vue'
 
+
 //initializing thee markdown interpreter
 var md = require('markdown-it')({
     breaks:true,
 });
+
 
 ////markdown custom component settings
 var inlineCounter  = -1;
@@ -49,39 +89,32 @@ md.use(require('markdown-it-container'), 'inline', {
     }
 });
 
-
 export default {
-    name: 'view-system',
+    name: 'new-system',
     data () {
         return {
             system_id: null,
             title: null,
-            body: 'loading...',
-            inlineList: [],
+            parent: null,
+            body: "type",
         }
-    },
-    beforeRouteEnter (to, from, next) {
-        db.collection('systems')
-        .where('system_id', '==', to.params.system_id)
-        .get().then(querySnapshot => {
-            querySnapshot.forEach(doc => {
-                next(vm => {
-                    vm.system_id = doc.data().system_id 
-                    vm.body = doc.data().body 
-                    vm.title = doc.data().title
-                })
-            })
-        })  
     },
     computed: {
         mdRendered() {
             var ren = md.render(this.body);
             ren = ren.replace(/<br>/g, '<br><br>'); 
-            return ren;
+            return ren
         },
-        isLoaded() {
-            if (this.body === 'loading...') return false
-            else return true
+        textHeight() {
+            if (this.body === "type"){
+                return 5
+            } else {
+            var textHeight = document.getElementById("mdEditor").scrollHeight
+            textHeight -= 12
+            var rows = Math.ceil(textHeight/24)
+            rows = rows > 5 ? rows : 5;
+            return rows
+            }
         },
         mdViewer: function() {
             var selfParent = this;
@@ -170,30 +203,37 @@ export default {
             }
         }
     },
-    created: function() {
-        this.fetchData()
-    },
-    watch: {
-        '$route': 'fetchData'
-    },
     methods: {
-        fetchData () {
-            db.collection('systems')
-            .where('system_id', '==', this.$route.params.system_id)
-            .get().then(querySnapshot => {
-                querySnapshot.forEach(doc => {
-                    
-                    this.system_id = doc.data().system_id 
-                    this.title = doc.data().title 
-                    this.body = doc.data().body 
-                })
+        saveSystem () {
+            console.log("form recieved:")
+            console.log(
+                this.system_id,
+                this.title,
+                this.parent,
+                this.body 
+            )
+
+            db.collection('systems').add({
+            system_id: this.system_id,
+            title: this.title,
+            parent: this.parent,
+            body: this.body              
             })
-        },
+            .then(docRef => {
+                this.$router.push('/')
+            })
+            .catch(error => console.log(err))
+        }
     }
 }
 </script>
 
 <style>
+#FormBox {
+    text-align: justify;
+    text-justify: none;
+    width: 520px;
+}
 #textBox {
     text-align: justify;
     text-justify: none;
@@ -205,6 +245,9 @@ hr { display: block; height: 1px;
 }
 p {
 display: inline;
+}
+img{
+    width: 520px;
 }
 #mdInline {
     color: rgb(134, 134, 134);
