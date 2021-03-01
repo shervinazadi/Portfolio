@@ -18,7 +18,7 @@
     "markdown-it-container": "^2.0.0",
     "markdown-loader": "^5.1.0",
     "orbit-controls-es6": "^2.0.0",
-    "three": "^0.87.1",
+    "three": "^0.125.0",
     "three-orbit-controls": "^82.1.0",
     "three-orbitcontrols": "^2.101.1",
     "three-orbitcontrols-ts": "^0.1.2",
