@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@types/three": "^0.93.21",
-    "d3": "^5.9.0",
+    "d3": "^7.6.1",
     "firebase": "^5.8.2",
     "hsl-to-hex": "^1.0.0",
     "markdown-it": "^10.0.0",
